@@ -16,11 +16,11 @@ For more information on the steps to integrate the frameworks, you can read the 
 
 ### Inline SVGs
 
-To reduce clutter in `app-svg-component.html`, I have moved SVGs to their own file in the assets folder. These are now dynamically loaded using the [ng-inline-svg](https://github.com/arkon/ng-inline-svg) package, using a custom component.
+To reduce clutter in `app-svg-component.html`, I have moved SVGs to their own file in the assets folder. These are now dynamically loaded using the [ng-inline-svg](https://github.com/arkon/ng-inline-svg) package, through a minimal custom component.
 
 ### ESLint
 
-Linting is configured to use [ESLint](https://eslint.org/) through the [angular-eslint](https://github.com/angular-eslint/angular-eslint) project. I followed the configuration examples referenced in their repository and it pretty much _just works&trade;_. Kudos to the team for the fantastic job they are doing.
+Linting is configured to use [ESLint](https://eslint.org/) with the [angular-eslint](https://github.com/angular-eslint/angular-eslint) project. I followed the configuration examples referenced in their repository and it pretty much _just works&trade;_. Kudos to the team for the fantastic job they are doing.
 
 
 ## Development
