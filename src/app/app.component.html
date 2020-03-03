@@ -1,0 +1,197 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!-- Toolbar -->
+<div
+  class="absolute top-0 w-full h-16 flex items-center
+         bg-blue-600 text-white font-semibold"
+  role="banner"
+>
+  <img
+    class="ml-2 mr-3 w-12"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span class="text-xl">Welcome</span>
+    <div class="flex-1"></div>
+    <a
+      class="w-12 hover:opacity-75"
+      aria-label="Angular on twitter"
+      target="_blank" rel="noopener"
+      href="https://twitter.com/angular"
+      title="Twitter"
+    >
+      <app-svg name="twitter-logo"></app-svg>
+    </a>
+</div>
+
+<div class="flex flex-col mt-24 px-4 items-center" role="main">
+
+  <!-- Highlight Card -->
+  <div
+    class="relative flex items-center w-56 ml-6 py-3
+           bg-blue-600 text-white font-semibold border-none
+           sm:w-auto sm:pr-6"
+  >
+
+    <app-svg
+      class="absolute top-0 left-0 w-20
+             transform -translate-x-8 -translate-y-2
+             sm:-translate-x-6 sm:-translate-y-4"
+      name="app-rocket"
+    ></app-svg>
+    <span class="ml-16">{{ title }} app is running!</span>
+
+    <app-svg
+      class="absolute top-0 right-0 -z-10 w-120 sm:w-72 xl:w-88
+             transform -translate-x-36 sm:-translate-x-64"
+      name="app-rocket-smoke"
+    ></app-svg>
+  </div>
+
+  <!-- Resources -->
+  <h2 class="font-bold text-lg">Resources</h2>
+  <p>Here are some links to help you get started:</p>
+
+  <div
+    class="card-container flex-col w-full
+           sm:w-auto sm:flex-row"
+    >
+    <a
+      *ngFor="let res of resources"
+      class="card p-4 text-blue-600 mt-2"
+      target="_blank" rel="noopener" href="{{ res.href }}"
+    >
+      <app-svg
+        class="w-6 text-gray-600 fill-current"
+        name="{{ res.svg }}"
+      >
+      </app-svg>
+      <span class="ml-2">{{ res.title }}</span>
+      <app-svg
+        class="w-6 text-gray-600 fill-current"
+        name="chevron-right"
+      >
+      </app-svg>
+    </a>
+  </div>
+
+  <!-- Next Steps -->
+  <h2>Next Steps</h2>
+  <p>What do you want to do next with your app?</p>
+
+  <input type="hidden" #selection>
+
+  <div class="card-container flex-wrap">
+    <button
+      *ngFor="let step of steps; let i=index"
+      class="card card-small focus:outline-none focus:border-gray-600"
+      (click)="selection.value = step.value"
+      tabindex="0"
+    >
+      <app-svg
+        class="w-3 text-gray-500 fill-current"
+        name="add-icon"
+      >
+      </app-svg>
+      <span class="ml-4">{{ step.title }}</span>
+    </button>
+  </div>
+
+  <!-- Terminal -->
+  <div
+    class="w-full max-w-xl mt-8 rounded
+           bg-gray-900 text-white"
+    [ngSwitch]="selection.value"
+  >
+        <pre *ngSwitchDefault class="term term-default">_</pre>
+        <div *ngFor="let switch of switches">
+          <pre *ngSwitchCase="switch.value" class="term">{{ switch.text }}</pre>
+        </div>
+  </div>
+
+  <!-- Links -->
+  <div class="card-container">
+    <a
+      *ngFor="let link of circles"
+      class="flex justify-center items-center
+             m-2 h-10 w-10 rounded-full
+             bg-white border-gray-100
+             cursor-pointer
+             transition
+             duration-1000
+             ease-out
+             transform
+             hover:-translate-y-2
+             hover:shadow-2xl
+             "
+      style="box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                         0 1px 2px rgba(0, 0, 0, 0.24);"
+      title="{{ link.title }}"
+      href="{{ link.href }}"
+    >
+      <app-svg
+        name="{{ link.svg }}"
+      >
+      </app-svg>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer
+    class="leading-8 my-4 text-base"
+  >
+      Love Angular?
+      <a
+        class="ml-1"
+        href="https://github.com/angular/angular"
+        target="_blank" rel="noopener">
+        Give our repo a star.
+      </a>
+      <div class="flex justify-center items-center mt-2">
+        <button
+          class="flex items-center text-xs px-2 ml-2
+                  border border-gray-500 rounded-md
+                  bg-gray-200 hover:bg-gray-300 hover:border-gray-600
+                  font-semibold focus:outline-none">
+          <app-svg
+            class="w-4 mr-1"
+            name="gh-star"
+          ></app-svg>
+          Star
+        </button>
+        <a
+          class="flex items-center
+                 transition duration-500 ease-out
+                 transform hover:translate-x-1"
+          href="https://github.com/angular/angular"
+          target="_blank" rel="noopener">
+          <app-svg
+            class="w-4 text-blue-600 fill-current"
+            name="chevron-right"
+          ></app-svg>
+        </a>
+      </div>
+  </footer>
+
+  <app-svg
+    class="fixed bottom-0 left-0 -z-10
+           transform -translate-x-48 translate-y-48"
+    id="sapp-clouds"
+    name="app-clouds"
+  ></app-svg>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
