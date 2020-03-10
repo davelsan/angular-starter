@@ -25,6 +25,8 @@ export const config = {
     register({
       project: Path.join(__dirname, './tsconfig.json')
     });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    jasmine.getEnv().addReporter(
+      new SpecReporter({ spec: { displayStacktrace: true } })
+    );
   }
 };
