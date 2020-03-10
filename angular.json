@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "homepage-ng": {
+    "angular-tailwind-eslint": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -93,5 +93,5 @@
       }
     }
   },
-  "defaultProject": "homepage-ng"
+  "defaultProject": "angular-tailwind-eslint"
 }
