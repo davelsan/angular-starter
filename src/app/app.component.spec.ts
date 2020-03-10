@@ -27,7 +27,7 @@ describe('AppComponent', () => {
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const element = fixture.debugElement.nativeElement;
+    const element: HTMLElement = fixture.debugElement.nativeElement;
     expect(
       element
         .querySelector('.ml-16')
