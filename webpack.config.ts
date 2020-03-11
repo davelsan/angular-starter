@@ -1,5 +1,6 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
+import * as purgecss from '@fullhuman/postcss-purgecss';
 
+const purge = purgecss.default({
   // Specify the paths to all of the template files in your project
   content: [
     './src/**/*.html',
@@ -7,24 +8,24 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
   // Include any special characters you're using in this regular expression
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-});
+})
 
-module.exports = {
+export default {
   module: {
     rules: [
       {
         test: /\.css$/,
-        loader: "postcss-loader",
+        loader: 'postcss-loader',
         options: {
-          ident: "postcss",
+          ident: 'postcss',
           plugins: () => [
-            require("postcss-import"),
-            require("tailwindcss"),
-            purgecss,
-            require("autoprefixer")
+            require('postcss-import'),
+            require('tailwindcss'),
+            purge,
+            require('autoprefixer')
           ]
         }
       }
     ]
   }
-};
+}

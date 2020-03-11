@@ -28,7 +28,7 @@
             ],
             "scripts": [],
             "customWebpackConfig": {
-              "path": "./webpack.config.js"
+              "path": "./webpack.config.ts"
             }
           }
         },
@@ -37,7 +37,7 @@
           "options": {
             "browserTarget": "angular-tailwind-eslint:build",
             "customWebpackConfig": {
-              "path": "./webpack.config.js"
+              "path": "./webpack.config.ts"
             }
           }
         },
