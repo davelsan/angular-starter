@@ -35,7 +35,7 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "homepage-ng:build",
+            "browserTarget": "angular-tailwind-eslint:build",
             "customWebpackConfig": {
               "path": "./webpack.config.js"
             }
