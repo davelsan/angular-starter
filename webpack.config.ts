@@ -8,7 +8,7 @@ const purge = purgecss.default({
 
   // Include any special characters you're using in this regular expression
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-})
+});
 
 export default {
   module: {
@@ -21,7 +21,7 @@ export default {
           plugins: () => [
             require('postcss-import'),
             require('tailwindcss'),
-            purge,
+            ...process.env.NODE_ENV === 'production' ? [ purge ] : [],
             require('autoprefixer')
           ]
         }
