@@ -1,24 +1,25 @@
 /* CORE */
-import { BrowserModule }    from '@angular/platform-browser';
-import { NgModule }         from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule }      from '@angular/core';
 
 /* MODULES */
-import { InlineSVGModule } from 'ng-inline-svg';
+import { SharedModule } from './shared/shared.module';
 
 /* COMPONENTS */
-import { AppComponent }    from './app.component';
-import { AppSvgComponent } from './app-svg/app-svg.component';
+import { AppComponent } from './app.component';
+import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppSvgComponent,
+    ToolbarComponent,
   ],
   imports: [
+    // angular
     BrowserModule,
-    HttpClientModule,
-    InlineSVGModule.forRoot(),
+
+    // core & shared
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

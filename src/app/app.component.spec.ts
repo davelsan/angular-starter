@@ -1,6 +1,6 @@
 import { TestBed, async  } from '@angular/core/testing';
 import { AppComponent    } from './app.component';
-import { AppSvgComponent } from './app-svg/app-svg.component';
+import { AppSvgComponent } from './shared/app-svg/app-svg.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
