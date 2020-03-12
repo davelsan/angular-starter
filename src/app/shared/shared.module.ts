@@ -11,7 +11,9 @@ import { AppSvgComponent } from './app-svg/app-svg.component';
 
 
 @NgModule({
-  declarations: [AppSvgComponent],
+  declarations: [
+    AppSvgComponent
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
