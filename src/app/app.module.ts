@@ -2,12 +2,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule }      from '@angular/core';
 
-/* MODULES */
+/* NG_MODULES */
+import { SharedModule }     from '@shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { SharedModule }     from './shared/shared.module';
 
 /* COMPONENTS */
-import { AppComponent } from './app.component';
+import { AppComponent }     from './app.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { ContentComponent } from './layout/content/content.component';
 
