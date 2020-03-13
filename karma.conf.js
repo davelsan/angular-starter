@@ -10,6 +10,7 @@ module.exports = function (config) {
       'karma-chrome-launcher',
       'karma-jasmine-html-reporter',
       'karma-coverage-istanbul-reporter',
+      'karma-verbose-reporter',
       '@angular-devkit/build-angular/plugins/karma'
     ],
     client: {
@@ -20,13 +21,28 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'verbose'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    customLaunchers: {
+      ChromeHeadless: {
+          base: 'Chrome',
+          flags: [
+              '--headless',
+              '--disable-gpu',
+              '--no-sandbox',
+              '--remote-debugging-port=9222',
+          ]
+      }
+    },
+    browsers: [
+        'Chrome',
+        'ChromeHeadless',
+    ],
   });
 };

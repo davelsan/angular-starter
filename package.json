@@ -6,7 +6,7 @@
     "start": "ng serve",
     "lint": "ng lint",
     "build": "ng build",
-    "test:unit": "ng test",
+    "test:unit": "ng test --browsers=ChromeHeadless",
     "test:e2e": "ng e2e"
   },
   "private": true,
@@ -48,6 +48,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.1",
     "karma-jasmine": "~3.1.1",
     "karma-jasmine-html-reporter": "^1.5.2",
+    "karma-verbose-reporter": "^0.0.6",
     "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
     "protractor": "~5.4.3",
