@@ -1,7 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule }              from '@angular/router/testing';
-import { Component }                        from '@angular/core';
-import { ContentComponent }                 from './content.component';
+import {
+  async,
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
+
+import { RouterTestingModule }  from '@angular/router/testing';
+import { MockSvgDefsComponent } from '@core/mocks/svg-defs.mocks';
+import { MockToolbarComponent } from '@core/mocks/app-toolbar.mock';
+import { ContentComponent }     from './content.component';
 
 
 describe('ContentComponent', () => {
@@ -32,13 +38,3 @@ describe('ContentComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-@Component({
-  selector: 'app-toolbar',
-})
-class MockToolbarComponent { }
-
-@Component({
-  selector: 'svg-defs',
-})
-class MockSvgDefsComponent { }

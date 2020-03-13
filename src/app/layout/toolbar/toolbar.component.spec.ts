@@ -1,6 +1,11 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component }                        from '@angular/core';
-import { ToolbarComponent }                 from './toolbar.component';
+import {
+  async,
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
+
+import { MockSvgIconComponent} from '@core/mocks/svg-icon.mock';
+import { ToolbarComponent }    from './toolbar.component';
 
 
 describe('ToolbarComponent', () => {
@@ -24,12 +29,7 @@ describe('ToolbarComponent', () => {
   });
 
   it('should create', () => {
+    expect(1).toEqual(1);
     expect(component).toBeTruthy();
   });
 });
-
-@Component({
-  selector: 'svg-icon',
-  template: ''
-})
-class MockSvgIconComponent { }

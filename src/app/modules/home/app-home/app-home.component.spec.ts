@@ -1,6 +1,11 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component, Input }                 from '@angular/core';
-import { AppHomeComponent }                 from './app-home.component';
+import {
+  async,
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
+
+import { MockSvgIconComponent } from '@core/mocks/svg-icon.mock';
+import { AppHomeComponent }     from './app-home.component';
 
 
 describe('AppHomeComponent', () => {
@@ -43,10 +48,3 @@ describe('AppHomeComponent', () => {
     .toContain('angular-tailwind-eslint app is running!');
   });
 });
-
-@Component({
-  selector: 'svg-icon',
-})
-class MockSvgIconComponent {
-  @Input() name: string;
-}
