@@ -1,10 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-/* COMPONENT */
-import { AppHomeComponent } from './app-home.component';
-
-/* DEPENDENCIES */
-import { SvgIconComponent } from '@shared/svg-icon/svg-icon.component';
+import { Component, Input }                 from '@angular/core';
+import { AppHomeComponent }                 from './app-home.component';
 
 
 describe('AppHomeComponent', () => {
@@ -15,7 +11,7 @@ describe('AppHomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppHomeComponent,
-        SvgIconComponent,
+        MockSvgIconComponent,
       ]
     })
     .compileComponents();
@@ -47,3 +43,10 @@ describe('AppHomeComponent', () => {
     .toContain('angular-tailwind-eslint app is running!');
   });
 });
+
+@Component({
+  selector: 'svg-icon',
+})
+class MockSvgIconComponent {
+  @Input() name: string;
+}

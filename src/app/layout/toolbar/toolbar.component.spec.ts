@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component }                        from '@angular/core';
+import { ToolbarComponent }                 from './toolbar.component';
 
-import { ToolbarComponent } from './toolbar.component';
 
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
@@ -8,7 +9,10 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToolbarComponent ]
+      declarations: [
+        ToolbarComponent,
+        MockSvgIconComponent,
+      ]
     })
     .compileComponents();
   }));
@@ -23,3 +27,9 @@ describe('ToolbarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+@Component({
+  selector: 'svg-icon',
+  template: ''
+})
+class MockSvgIconComponent { }
