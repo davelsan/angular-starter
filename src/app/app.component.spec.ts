@@ -1,6 +1,5 @@
 import { TestBed, async  }     from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Component }           from '@angular/core';
 import { AppComponent }        from './app.component';
 
 
@@ -10,7 +9,6 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        MockSvgIconComponent,
       ],
       imports: [
         RouterTestingModule,
@@ -25,8 +23,3 @@ describe('AppComponent', () => {
     expect(1).toEqual(1);
   });
 });
-
-@Component({
-  selector: 'svg-icon',
-})
-class MockSvgIconComponent { }
