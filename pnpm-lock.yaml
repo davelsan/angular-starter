@@ -7,7 +7,6 @@ dependencies:
   '@angular/platform-browser': 9.0.6_50bfe009f47123ae21e297ef5243caad
   '@angular/platform-browser-dynamic': 9.0.6_9812dd3e0c44fbf4984b45b5de30eaee
   '@angular/router': 9.0.6_50764315257c22e618c9f1f1f3ef4bc9
-  ng-inline-svg: 10.0.0_91d4f7fa9aec04a4d044e8eb8bced081
   rxjs: 6.5.4
   tslib: 1.11.1
   zone.js: 0.10.2
@@ -6154,18 +6153,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
-  /ng-inline-svg/10.0.0_91d4f7fa9aec04a4d044e8eb8bced081:
-    dependencies:
-      '@angular/common': 9.0.6_e77ad494a78b423c415b4d8237be0a8a
-      '@angular/core': 9.0.6_3ee3023564f4243c52c7d9d5ddf9319b
-      rxjs: 6.5.4
-    dev: false
-    peerDependencies:
-      '@angular/common': '>=9.0.0'
-      '@angular/core': '>=9.0.0'
-      rxjs: ^6.5.0
-    resolution:
-      integrity: sha512-gyTOWmVT2F/l6vBMEcqVwebd9dTdGTxdiyVhmo9omRA2PuCjpfdeiNDM6txGEMfMElZy5zygxgTQJzpbJk4GPA==
   /nice-try/1.0.5:
     dev: true
     resolution:
@@ -9694,7 +9681,6 @@ specifiers:
   karma-coverage-istanbul-reporter: ~2.1.1
   karma-jasmine: ~3.1.1
   karma-jasmine-html-reporter: ^1.5.2
-  ng-inline-svg: ^10.0.0
   postcss-import: 12.0.1
   postcss-loader: 3.0.0
   protractor: ~5.4.3

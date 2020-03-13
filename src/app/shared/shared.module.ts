@@ -3,24 +3,20 @@ import { NgModule }         from '@angular/core';
 import { CommonModule }     from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
-/* ES_MODULES */
-import { InlineSVGModule } from 'ng-inline-svg';
-
 /* COMPONENTS */
-import { AppSvgComponent } from './app-svg/app-svg.component';
+import { SvgIconComponent } from './svg-icon/svg-icon.component';
 
 
 @NgModule({
   declarations: [
-    AppSvgComponent
+    SvgIconComponent,
   ],
   imports: [
     CommonModule,
     HttpClientModule,
-    InlineSVGModule.forRoot(),
   ],
   exports: [
-    AppSvgComponent
+    SvgIconComponent,
   ]
 })
 export class SharedModule { }

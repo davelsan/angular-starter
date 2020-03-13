@@ -12,11 +12,13 @@ To improve readability, I have leveraged structural directives where possible. T
 ### Tailwind CSS
 The original code has been modified to use [Tailwind CSS](https://tailwindcss.com/) utility classes as much as possible to give the app a similar look and feel to the original, including various effects and animations. The app design also now is fully responsive to various screen sizes.
 
-For more information on how to integrate the two frameworks, please read the excellent [Angular 8/9 + Tailwind CSS Guide](https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45) written by Sean Kerwin at [DEV](https://dev.to/).
+For more information on how to integrate the two frameworks, check the excellent [Angular 8/9 + Tailwind CSS Guide](https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45) written by [Sean Kerwin](https://twitter.com/lordkerwin) at [DEV](https://dev.to/).
 
 ### Inline SVGs
 
-To reduce clutter, I have moved inline `<svg/>` tags to their own file in the assets folder. These are now dynamically loaded by the [ng-inline-svg](https://github.com/arkon/ng-inline-svg) package, using a minimal shared component.
+To keep things organized, I have moved inline `svg` tags to a global `svg-defs` component in the `layout` folder. These are now dynamically loaded as `symbol` ids via the `svg-icon` shared component.
+
+For more information on how to organize svg icons using this method, check the excellent article [Easy way to organize your icons using SVGs in Angular 5](https://itnext.io/easy-way-to-organize-your-icons-using-svgs-in-angular-5-f35333d0b442) written by [Krisi Nikolova](https://twitter.com/krisinikolova) at [ITNext](https://itnext.io/).
 
 ### ESLint
 

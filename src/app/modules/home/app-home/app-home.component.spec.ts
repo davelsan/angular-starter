@@ -4,7 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppHomeComponent } from './app-home.component';
 
 /* DEPENDENCIES */
-import { AppSvgComponent } from '@shared/app-svg/app-svg.component';
+import { SvgIconComponent } from '@shared/svg-icon/svg-icon.component';
 
 
 describe('AppHomeComponent', () => {
@@ -15,7 +15,7 @@ describe('AppHomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppHomeComponent,
-        AppSvgComponent,
+        SvgIconComponent,
       ]
     })
     .compileComponents();

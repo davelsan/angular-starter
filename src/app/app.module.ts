@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }     from './app.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { ContentComponent } from './layout/content/content.component';
+import { SvgDefsComponent } from './layout/svg-defs/svg-defs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     ContentComponent,
+    SvgDefsComponent,
   ],
   imports: [
     // angular
