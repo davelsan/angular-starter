@@ -23,9 +23,12 @@ devDependencies:
   '@fullhuman/postcss-purgecss': 2.1.0
   '@types/jasmine': 3.5.9
   '@types/jasminewd2': 2.0.8
+  '@types/karma': 4.4.0
+  '@types/karma-coverage-istanbul-reporter': 2.1.0
   '@types/node': 13.9.0
   '@typescript-eslint/eslint-plugin': 2.23.0_9f87a6626aabebbe99f88159fc4926b8
   '@typescript-eslint/parser': 2.23.0_eslint@6.8.0+typescript@3.7.5
+  bluebird: 3.7.2
   codelyzer: 5.2.1_fd4b65b0b949c7752b83d59219b78ca6
   eslint: 6.8.0
   jasmine-core: 3.5.0
@@ -36,6 +39,7 @@ devDependencies:
   karma-jasmine: 3.1.1_karma@4.4.1
   karma-jasmine-html-reporter: 1.5.2_df4c5575889fe63306c184007cf62fa5
   karma-verbose-reporter: 0.0.6_karma@4.4.1
+  log4js: 6.1.2
   postcss-import: 12.0.1
   postcss-loader: 3.0.0
   protractor: 5.4.3
@@ -1244,6 +1248,10 @@ packages:
       yarn: '>= 1.13.0'
     resolution:
       integrity: sha512-54Xi3FIJQWFBM91vxD9ciKkTlNWaIV7wsjKSImg53h2m2/l2VPPHyIZWI4j79dWXlfJVTNeaqPNYGzJlRvaEmA==
+  /@types/bluebird/3.5.30:
+    dev: true
+    resolution:
+      integrity: sha512-8LhzvcjIoqoi1TghEkRMkbbmM+jhHnBokPGkJWjclMK+Ks0MxEBow3/p2/iFTZ+OIbJHQDSfpgdZEb+af3gfVw==
   /@types/color-name/1.1.1:
     dev: true
     resolution:
@@ -1282,6 +1290,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
+  /@types/karma-coverage-istanbul-reporter/2.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-r6y5GgvSUjAhztwDWpRxiZV+Q6knsudGQtF3/ri80AFyHawD0LC9Oz64ZhfexRU0EYWpU3hQJl35IjgTLGtvUg==
+  /@types/karma/4.4.0:
+    dependencies:
+      '@types/bluebird': 3.5.30
+      '@types/node': 13.9.1
+      log4js: 4.5.1
+    dev: true
+    resolution:
+      integrity: sha512-+b5BsyqXBHRqw7UxzTjQNgj5hjJPAIfWQyLebTOsDrWQVJCghc5j5+U9hbRayc2qfrG07FqDi9m5s3aJ4XNRcA==
   /@types/minimatch/3.0.3:
     dev: true
     resolution:
@@ -1290,6 +1310,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0ARSQootUG1RljH2HncpsY2TJBfGQIKOOi7kxzUY6z54ePu/ZD+wJA8zI2Q6v8rol2qpG/rvqsReco8zNMPvhQ==
+  /@types/node/13.9.1:
+    dev: true
+    resolution:
+      integrity: sha512-E6M6N0blf/jiZx8Q3nb0vNaswQeEyn0XlupO+xN6DtJ6r6IT4nXrTry7zhIfYvFCl3/8Cu6WIysmUBKiqV0bqQ==
   /@types/q/0.0.32:
     dev: true
     resolution:
@@ -3156,6 +3180,12 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha512-bYQuGLeFxhkxNOF3rcMtiZxvCBAquGzZm6oWA1oZ0g2THUzivaRhv8uOhdr19LmoobSOLoIAxeUK2RdbM8IFTA==
+  /date-format/3.0.0:
+    dev: true
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-eyTcpKOcamdhWJXj56DpQMo1ylSQpcGtGKXcU0Tb97+K56/CF5amAqqqNj0+KvA0iw2ynxtHWFsPDSClCxe48w==
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -5742,6 +5772,18 @@ packages:
       node: '>=6.0'
     resolution:
       integrity: sha512-EEEgFcE9bLgaYUKuozyFfytQM2wDHtXn4tAN41pkaxpNjAykv11GVdeI4tHtmPWW4Xrgh9R/2d7XYghDVjbKKw==
+  /log4js/6.1.2:
+    dependencies:
+      date-format: 3.0.0
+      debug: 4.1.1
+      flatted: 2.0.1
+      rfdc: 1.1.4
+      streamroller: 2.2.3
+    dev: true
+    engines:
+      node: '>=8.0'
+    resolution:
+      integrity: sha512-knS4Y30pC1e0n7rfx3VxcLOdBCsEo0o6/C7PVTGxdVK+5b1TYOSGQPn9FDcrhkoQBV29qwmA2mtkznPAQKnxQg==
   /loglevel/1.6.7:
     dev: true
     engines:
@@ -8502,6 +8544,16 @@ packages:
       node: '>=6.0'
     resolution:
       integrity: sha512-3QC47Mhv3/aZNFpDDVO44qQb9gwB9QggMEE0sQmkTAwBVYdBRWISdsywlkfm5II1Q5y/pmrHflti/IgmIzdDBg==
+  /streamroller/2.2.3:
+    dependencies:
+      date-format: 2.1.0
+      debug: 4.1.1
+      fs-extra: 8.1.0
+    dev: true
+    engines:
+      node: '>=8.0'
+    resolution:
+      integrity: sha512-AegmvQsscTRhHVO46PhCDerjIpxi7E+d2GxgUDu+nzw/HuLnUdxHWr6WQ+mVn/4iJgMKKFFdiUwFcFRDvcjCtw==
   /strict-uri-encode/1.1.0:
     dev: true
     engines:
@@ -9679,9 +9731,12 @@ specifiers:
   '@fullhuman/postcss-purgecss': ^2.1.0
   '@types/jasmine': ~3.5.9
   '@types/jasminewd2': ~2.0.8
+  '@types/karma': ^4.4.0
+  '@types/karma-coverage-istanbul-reporter': ^2.1.0
   '@types/node': ^13.9.0
   '@typescript-eslint/eslint-plugin': ^2.23.0
   '@typescript-eslint/parser': ^2.23.0
+  bluebird: ^3.7.2
   codelyzer: ^5.2.1
   eslint: ^6.8.0
   jasmine-core: ~3.5.0
@@ -9692,6 +9747,7 @@ specifiers:
   karma-jasmine: ~3.1.1
   karma-jasmine-html-reporter: ^1.5.2
   karma-verbose-reporter: ^0.0.6
+  log4js: ^6.1.2
   postcss-import: 12.0.1
   postcss-loader: 3.0.0
   protractor: ~5.4.3

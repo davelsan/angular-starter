@@ -2,6 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
+    "module": "esnext",
+    "target": "es2015",
     "types": []
   },
   "files": [

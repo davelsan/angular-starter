@@ -1,7 +1,10 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-module.exports = function (config) {
+import { join }   from 'path';
+import { Config } from 'karma';
+
+export default function (config: Config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -14,10 +17,11 @@ module.exports = function (config) {
       '@angular-devkit/build-angular/plugins/karma'
     ],
     client: {
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      // leave Jasmine Spec Runner output visible in browser
+      clearContext: false
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/homepage-ng'),
+      dir: join(__dirname, './coverage/angular-tailwind-eslint'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
@@ -26,7 +30,10 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: [
+      'Chrome',
+      'ChromeHeadless',
+    ],
     singleRun: false,
     restartOnFileChange: true,
     customLaunchers: {
@@ -40,9 +47,5 @@ module.exports = function (config) {
           ]
       }
     },
-    browsers: [
-        'Chrome',
-        'ChromeHeadless',
-    ],
   });
 };

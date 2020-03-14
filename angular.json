@@ -53,7 +53,7 @@
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "karmaConfig": "karma.conf.ts",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -81,7 +81,7 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "protractorConfig": "e2e/protractor.conf.ts",
             "devServerTarget": "angular-tailwind-eslint:serve"
           },
           "configurations": {
