@@ -1,11 +1,13 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
-import * as Path        from 'path';
-import { register }     from 'ts-node';
 import { SpecReporter } from 'jasmine-spec-reporter';
+import { join }         from 'path';
+import { Config }       from 'protractor';
+import { register }     from 'ts-node';
 
-export const config = {
+
+export const config: Config = {
   allScriptsTimeout: 11000,
   specs: [
     './src/**/*.e2e-spec.ts'
@@ -23,7 +25,10 @@ export const config = {
   },
   onPrepare() {
     register({
-      project: Path.join(__dirname, './tsconfig.json')
+      compilerOptions: {
+        module: 'CommonJS'
+      },
+      project: join(__dirname, './tsconfig.json')
     });
     jasmine.getEnv().addReporter(
       new SpecReporter({ spec: { displayStacktrace: true } })
