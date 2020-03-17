@@ -10,7 +10,7 @@ import { MockHomeResourcesComponent } from '@core/mocks/home-resources.mock';
 import { MockHomeStepsComponent }     from '@core/mocks/home-steps.mock';
 
 
-describe('AppHomeComponent', () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 

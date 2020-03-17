@@ -7,7 +7,7 @@ import { ResourcesComponent }   from './resources.component';
 import { MockSvgIconComponent } from '@core/mocks/svg-icon.mock';
 
 
-describe('AppHomeResourcesComponent', () => {
+describe('ResourcesComponent', () => {
   let component: ResourcesComponent;
   let fixture: ComponentFixture<ResourcesComponent>;
 
