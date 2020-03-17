@@ -6,13 +6,20 @@ import { SharedModule }     from '@shared/shared.module';
 import { HomeRoutingModule} from './home-routing.module';
 
 /* COMPONENTS */
-import { AppHomeComponent } from './app-home/app-home.component';
-
+import { HomeComponent }      from './app-home/home.component';
+import { HighlightComponent } from './highlight/highlight.component';
+import { LinksComponent }     from './links/links.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { StepsComponent }     from './steps/steps.component';
 
 
 @NgModule({
   declarations: [
-    AppHomeComponent
+    HomeComponent,
+    LinksComponent,
+    HighlightComponent,
+    ResourcesComponent,
+    StepsComponent,
   ],
   imports: [
     CommonModule,
@@ -20,7 +27,7 @@ import { AppHomeComponent } from './app-home/app-home.component';
     SharedModule,
   ],
   exports: [
-    AppHomeComponent,
+    HomeComponent,
   ]
 })
 export class HomeModule { }

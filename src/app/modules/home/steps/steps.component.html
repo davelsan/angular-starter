@@ -1,0 +1,44 @@
+<div class="flex flex-col items-center mt-5">
+
+  <h2 class="mb-2 font-bold text-lg">Next Steps</h2>
+
+  <p>What do you want to do next with your app?</p>
+
+  <input type="hidden" #selection>
+
+  <!-- Steps -->
+  <div
+    class="flex flex-wrap justify-center mt-2 w-full
+           sm:w-auto sm:flex-row"
+  >
+    <button
+      *ngFor="let step of steps; let i=index"
+      class="flex justify-center items-center mt-2 p-2 w-full sm:w-auto
+             sm:mr-2 sm:last:mr-0
+             border rounded-lg bg-gray-100
+             hover:bg-gray-300 focus:outline-none focus:border-gray-600"
+      (click)="selection.value = step.value"
+      tabindex="0"
+    >
+      <svg-icon
+        class="text-gray-500 fill-current"
+        svgClass="w-4 h-4"
+        name="add-icon"
+      >
+      </svg-icon>
+      <span class="ml-1">{{ step.label }}</span>
+    </button>
+  </div>
+
+  <!-- Terminal -->
+  <div
+    class="w-full max-w-xl mt-8 rounded bg-gray-900 text-white"
+    [ngSwitch]="selection.value"
+  >
+        <pre *ngSwitchDefault class="term term-anim">_</pre>
+        <div *ngFor="let switch of switches">
+          <pre *ngSwitchCase="switch.value" class="term">{{ switch.text }}</pre>
+        </div>
+  </div>
+
+</div>

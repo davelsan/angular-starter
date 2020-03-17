@@ -49,12 +49,16 @@
 
         "quotes": ["error", "single"],
 
+        "semi": "error",
+
         "sort-keys": "off",
 
 
         "@typescript-eslint/array-type": "off",
 
         "@typescript-eslint/explicit-member-accessibility": "off",
+
+        "@typescript-eslint/indent": [ "warn", 2 ],
 
         "@typescript-eslint/interface-name-prefix": "off",
 
@@ -82,7 +86,7 @@
         "@angular-eslint/component-selector": [
           "error", {
             "type": "element",
-            "prefix": [ "app", "svg" ],
+            "prefix": [ "app", "home", "svg" ],
             "style": "kebab-case"
           }
         ],

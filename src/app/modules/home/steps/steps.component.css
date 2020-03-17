@@ -1,0 +1,16 @@
+.term {
+  @apply py-6;
+  @apply px-4;
+  @apply w-full;
+  @apply cursor-text;
+}
+
+.term-anim {
+  animation: term-anim 1s steps(5, start) infinite;
+}
+
+@keyframes term-anim {
+  to {
+    visibility: hidden;
+  }
+}

@@ -1,29 +1,28 @@
-import {
-  async,
-  ComponentFixture,
-  TestBed
-} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+/* COMPONENT */
+import { HighlightComponent } from './highlight.component';
+
+/* MOCKS */
 import { MockSvgIconComponent } from '@core/mocks/svg-icon.mock';
-import { AppHomeComponent }     from './app-home.component';
 
 
-describe('AppHomeComponent', () => {
-  let component: AppHomeComponent;
-  let fixture: ComponentFixture<AppHomeComponent>;
+describe('HighlightComponent', () => {
+  let component: HighlightComponent;
+  let fixture: ComponentFixture<HighlightComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppHomeComponent,
+        HighlightComponent,
         MockSvgIconComponent,
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppHomeComponent);
+    fixture = TestBed.createComponent(HighlightComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -45,6 +44,7 @@ describe('AppHomeComponent', () => {
         .querySelector('.ml-16')
         .textContent
     )
-    .toContain('angular-tailwind-eslint app is running!');
+      .toContain('angular-tailwind-eslint app is running!');
   });
+
 });
