@@ -11,13 +11,13 @@ To improve readability, I have leveraged structural directives where possible. T
 
 ### Tailwind CSS
 
-The original code has been modified to use [Tailwind CSS](https://tailwindcss.com/) utility classes as much as possible to give the app a similar look and feel to the original, including various effects and animations. The app design also now is fully responsive to various screen sizes.
+The original code has been modified to use [Tailwind CSS](https://tailwindcss.com/) utility classes as much as possible to give the app a similar look and feel to the original, including various effects and animations. The app design also now is fully responsive to changes in screen size.
 
 For more information on how to integrate the two frameworks, check the excellent [Angular 8/9 + Tailwind CSS Guide](https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45) written by [Sean Kerwin](https://twitter.com/lordkerwin) at [DEV](https://dev.to/).
 
 ### Inline SVGs
 
-To keep things organized, I have moved inline `svg` tags to a global `symbol-defs.svg` file in the `assets` folder. These are now dynamically loaded as `symbol` ids via the `svg-icon` shared component.
+To keep things organized, I have moved inline `svg` tags to a global `symbol-defs.svg` file in the `assets` folder. These are now dynamically loaded from `symbol` ids via the `svg-icon` shared component.
 
 For more information on how to organize svg icons using this method, check the excellent article [Using an SVG sprite icon system in Angular](https://medium.com/@rubenvermeulen/using-an-svg-sprite-icon-system-in-angular-9d4056357b60), written by [Ruben Vermeulen](https://twitter.com/rubverm) at [Medium](https://medium.com/).
 
