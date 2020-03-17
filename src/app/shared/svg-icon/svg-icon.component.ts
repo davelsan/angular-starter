@@ -8,13 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SvgIconComponent implements OnInit {
 
   @Input() name: string;
-  @Input() svgClass: string;
-  @Input() width: string;
-  @Input() height: string;
-
-  get absUrl() : string {
-    return window.location.href;
-  }
 
   constructor() { }
 

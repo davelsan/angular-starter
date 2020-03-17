@@ -1,8 +1,12 @@
 module.exports = {
   theme: {
     extend: {
+      rotate: {
+        '-5': '-5deg',
+      },
       spacing: {
-        '160': '40rem',
+        '14': '3.5rem',
+        '68': '17rem',
       },
       zIndex: {
         '-10': '-10',

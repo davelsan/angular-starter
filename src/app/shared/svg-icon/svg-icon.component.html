@@ -1,10 +1,8 @@
 <svg
-  [class]="svgClass"
-  [attr.width]="width"
-  [attr.height]="height"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
   <use
-    [attr.xlink:href]="absUrl + '#' + name"></use>
+    attr.xlink:href="assets/svg/symbol-defs.svg#{{name}}"
+  ></use>
 </svg>
