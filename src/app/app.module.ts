@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }     from './app.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { ContentComponent } from './layout/content/content.component';
-import { FooterComponent } from './layout/footer/footer.component';
+import { FooterComponent }  from './layout/footer/footer.component';
 
 
 @NgModule({

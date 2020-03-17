@@ -17,7 +17,7 @@ describe('SvgIconComponent', () => {
         SvgIconComponent
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

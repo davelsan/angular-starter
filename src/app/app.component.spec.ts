@@ -1,10 +1,9 @@
-import {
-  async,
-  ComponentFixture,
-  TestBed,
-} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+/* MODULES */
 import { RouterTestingModule } from '@angular/router/testing';
+
+/* COMPONENT */
 import { AppComponent }        from './app.component';
 
 
