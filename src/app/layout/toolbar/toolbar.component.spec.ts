@@ -19,7 +19,7 @@ describe('ToolbarComponent', () => {
         MockSvgIconComponent,
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
