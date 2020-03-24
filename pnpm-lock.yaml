@@ -31,6 +31,7 @@ devDependencies:
   bluebird: 3.7.2
   codelyzer: 5.2.1_8ac63a1f547c95bce3fa69bdf1525efc
   eslint: 6.8.0
+  http-server: 0.12.1
   jasmine-core: 3.5.0
   jasmine-spec-reporter: 5.0.0
   karma: 4.4.1
@@ -2079,6 +2080,12 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha1-R2iMuZu2gE8OBtPnY7HDLlfY5rY=
+  /basic-auth/1.1.0:
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-RSIe5Cn37h5QNb4/UVM/HN/SmIQ=
   /batch/0.6.1:
     dev: true
     resolution:
@@ -2902,6 +2909,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /corser/2.0.1:
+    dev: true
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-jtolLsqrWEDc2XXOuQ2TcMgZ/4c=
   /cosmiconfig/5.2.1:
     dependencies:
       import-fresh: 2.0.0
@@ -3481,6 +3494,16 @@ packages:
     dev: true
     resolution:
       integrity: sha1-OoOpBOVDUyh4dMVkt1SThoSamMk=
+  /ecstatic/3.3.2:
+    dependencies:
+      he: 1.2.0
+      mime: 1.6.0
+      minimist: 1.2.5
+      url-join: 2.0.5
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-fLf9l1hnwrHI2xn9mEDT7KIi22UDqA2jaCwyCbSUJh9a1V+LEUSL/JO/6TIz/QyuBURWUHrFL5Kg2TtO1bkkog==
   /ee-first/1.1.1:
     dev: true
     resolution:
@@ -4515,6 +4538,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==
+  /he/1.2.0:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
   /hex-color-regex/1.1.0:
     dev: true
     resolution:
@@ -4645,6 +4673,24 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-84I2iJM/n1d4Hdgc6y2+qY5mDaz2PUVjlg9znE9byl+q0uC3DeByqBGReQu5tpLK0TAqTIXScRUV+dg7+bUPpQ==
+  /http-server/0.12.1:
+    dependencies:
+      basic-auth: 1.1.0
+      colors: 1.4.0
+      corser: 2.0.1
+      ecstatic: 3.3.2
+      http-proxy: 1.18.0
+      opener: 1.5.1
+      optimist: 0.6.1
+      portfinder: 1.0.25
+      secure-compare: 3.0.1
+      union: 0.5.0
+    dev: true
+    engines:
+      node: '>=6'
+    hasBin: true
+    resolution:
+      integrity: sha512-T0jB+7J7GJ2Vo+a4/T7P7SbQ3x2GPDnqRqQXdfEuPuUOmES/9NBxPnDm7dh1HGEeUWqUmLUNtGV63ZC5Uy3tGA==
   /http-signature/1.2.0:
     dependencies:
       assert-plus: 1.0.0
@@ -6117,6 +6163,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==
+  /mkdirp/0.5.4:
+    dependencies:
+      minimist: 1.2.5
+    deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-iG9AK/dJLtJ0XNgTuDbSyNS3zECqDlAhnQW4CsNxBG3LQJBbHmRX1egw39DmtOdCAqY+dKXV+sgPgilNWUKMVw==
   /move-concurrently/1.0.1:
     dependencies:
       aproba: 1.2.0
@@ -6510,6 +6564,11 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-K6EKzYqnwQzk+/dzJAQSBORub3xlBTxMz+ntpZpH/LyCa1o6KjXhuN+2npAaI9jaSmU3R1Q8NWf4KUWcyytGsQ==
+  /opener/1.5.1:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-goYSy5c2UXE4Ra1xixabeVh1guIX/ZV/YokJksb6q2lubWu6UbvPQ20p542/sFIll1nl8JnCyK9oBaOcCWXwvA==
   /opn/5.5.0:
     dependencies:
       is-wsl: 1.1.0
@@ -6897,7 +6956,7 @@ packages:
     dependencies:
       async: 2.6.3
       debug: 3.2.6
-      mkdirp: 0.5.3
+      mkdirp: 0.5.4
     dev: true
     engines:
       node: '>= 0.12.0'
@@ -7492,6 +7551,12 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
+  /qs/6.9.2:
+    dev: true
+    engines:
+      node: '>=0.6'
+    resolution:
+      integrity: sha512-2eQ6zajpK7HwqrY1rRtGw5IZvjgtELXzJECaEDuzDFo2jjnIXpJSimzd4qflWZq6bLLi+Zgfj5eDrAzl/lptyg==
   /query-string/4.3.4:
     dependencies:
       object-assign: 4.1.1
@@ -8009,6 +8074,10 @@ packages:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-5KXuwKziQrTVHh8j/Uxz+QUbxkaLW9X/86NBlx/gnKgtsZA2GIVMUn17qWhRFwF8jdYb3Dig5hRO/W5mZqy6SQ==
+  /secure-compare/3.0.1:
+    dev: true
+    resolution:
+      integrity: sha1-8aAymzCLIh+uN7mXTz1XjQypmeM=
   /select-hose/2.0.0:
     dev: true
     resolution:
@@ -9171,6 +9240,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-tJfXmxMeWYnczCVs7XAEvIV7ieppALdyepWMkHkwciRpZraG/xwT+s2JN8+pr1+8jCRf80FFzvr+MpQeeoF4Xg==
+  /union/0.5.0:
+    dependencies:
+      qs: 6.9.2
+    dev: true
+    engines:
+      node: '>= 0.8.0'
+    resolution:
+      integrity: sha512-N6uOhuW6zO95P3Mel2I2zMsbsanvvtgn6jVqJv4vbVcz/JN0OkL9suomjQGmWtxJQXOCqUJvquc1sMeNz/IwlA==
   /uniq/1.0.1:
     dev: true
     resolution:
@@ -9240,6 +9317,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+  /url-join/2.0.5:
+    dev: true
+    resolution:
+      integrity: sha1-WvIvGMBSoACkjXuCxenC4v7tpyg=
   /url-parse/1.4.7:
     dependencies:
       querystringify: 2.1.1
@@ -9758,6 +9839,7 @@ specifiers:
   bluebird: ^3.7.2
   codelyzer: ^5.2.1
   eslint: ^6.8.0
+  http-server: ^0.12.1
   jasmine-core: ~3.5.0
   jasmine-spec-reporter: ~5.0.0
   karma: ~4.4.1

@@ -1,4 +1,4 @@
-name: Node.js cross-platform CI (pnpm)
+name: Node.js cross-platform CI with pnpm
 on:
   push:
     branches:
@@ -29,3 +29,7 @@ jobs:
           pnpm run build:ci
         env:
           CI: true
+
+      - name: Publish code coverage report
+        run: |
+          bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }}
