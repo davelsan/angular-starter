@@ -43,6 +43,7 @@ devDependencies:
   postcss-import: 12.0.1
   postcss-loader: 3.0.0
   protractor: 5.4.3
+  rimraf: 3.0.2
   tailwindcss: 1.2.0
   ts-node: 8.8.1_typescript@3.7.5
   typescript: 3.7.5
@@ -7874,6 +7875,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-NDGVxTsjqfunkds7CqsOiEnxln4Bo7Nddl3XhS4pXg5OzwkLqJ971ZVAAnB+DDLnF76N+VnDEiBHaVV8I06SUg==
+  /rimraf/3.0.2:
+    dependencies:
+      glob: 7.1.6
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   /ripemd160/2.0.2:
     dependencies:
       hash-base: 3.0.4
@@ -9762,6 +9770,7 @@ specifiers:
   postcss-import: 12.0.1
   postcss-loader: 3.0.0
   protractor: ~5.4.3
+  rimraf: ^3.0.2
   rxjs: ~6.5.4
   tailwindcss: 1.2.0
   ts-node: ~8.8.1
