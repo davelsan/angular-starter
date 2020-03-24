@@ -1,4 +1,4 @@
-name: Build
+name: Node.js cross-platform CI (pnpm)
 on:
   push:
     branches:
@@ -6,28 +6,26 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
         node-version: [12.x]
 
     steps:
       - uses: actions/checkout@v1
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Node ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: pnpm ci and pnpm run build
+      - name: Install pnpm
+        run: npm add -g pnpm
+
+      - name: pnpm install and build
         run: |
           pnpm install
           pnpm run build:ci
+        env:
+          CI: true
