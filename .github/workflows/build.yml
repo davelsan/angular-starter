@@ -30,10 +30,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: pnpm install and build
+      - name: Install packages and build for production
         run: |
           pnpm install
-          pnpm run build:ci
+          pnpm run build
+
+      - name: Run unit tests
+        run: |
+          pnpm run ci:unit
         env:
           CI: true
 
@@ -42,4 +46,4 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unittests
-          fail_ci_if_error: false
+          fail_ci_if_error: true

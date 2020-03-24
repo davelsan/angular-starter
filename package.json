@@ -7,10 +7,9 @@
     "lint": "ng lint",
     "test:unit": "ng test --browsers=ChromeHeadless --code-coverage",
     "test:e2e": "tsc e2e/protractor.conf.ts && ng e2e",
-    "test:ci": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
     "coverage": "http-server -c-1 -p 9875 ./coverage",
     "build": "rimraf ./dist && ng build --prod",
-    "build:ci": "npm run test:ci && npm run build"
+    "ci:unit": "ng test --watch=false --browsers=ChromeHeadless --code-coverage"
   },
   "private": true,
   "dependencies": {
