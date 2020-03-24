@@ -9,7 +9,7 @@
     <a href="https://codecov.io/gh/davelsan/angular-tailwind-eslint">
       <img alt="Code Coverage" src="https://codecov.io/gh/davelsan/angular-tailwind-eslint/branch/master/graph/badge.svg"/>
     </a>
-    <a href="https://github.com/davvelsan/angular-tailwind-eslint/blob/master/LICENSE">
+    <a href="https://github.com/davelsan/angular-tailwind-eslint/blob/master/LICENSE">
       <img alt="License" src="https://img.shields.io/github/license/davelsan/angular-tailwind-eslint"/>
     </a>
 </p>
