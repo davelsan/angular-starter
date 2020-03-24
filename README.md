@@ -34,9 +34,9 @@ For more information on how to integrate the two frameworks, check the excellent
 Linting is configured to use [ESLint](https://eslint.org/) with the [angular-eslint](https://github.com/angular-eslint/angular-eslint) project. I followed the configuration examples referenced in their repository and it pretty much _just works&trade;_. Kudos to the team for the fantastic job they are doing.
 
 
-### Testing
+### Karma / Jasmine
 
-[Karma](https://karma-runner.github.io/latest/index.html) has been reconfigured to run [Jasmine](https://jasmine.github.io/) unit tests in a headless Chrome environment. Test and coverage results are thus printed to standard output, but both are still served to the appropriate development environment and can be checked in the browser, if desired.
+Unit tests have been reconfigured to run in a headless Chrome environment. Test and coverage results are thus printed to standard output, but both are still served to the appropriate development environment and can be checked in the browser, if desired.
 
 ## Use in Development
 
