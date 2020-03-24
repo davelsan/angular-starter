@@ -7,7 +7,9 @@
     "lint": "ng lint",
     "test:unit": "ng test --browsers=ChromeHeadless",
     "test:e2e": "tsc e2e/protractor.conf.ts && ng e2e",
-    "build": "rimraf ./dist && ng build"
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "build": "rimraf ./dist && ng build --prod",
+    "build:ci": "npm run test:ci && npm run build"
   },
   "private": true,
   "dependencies": {
