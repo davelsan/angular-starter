@@ -1,4 +1,4 @@
-name: Node.js cross-platform CI with pnpm
+name: build
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest]
         node-version: [12.x]
 
     steps:
@@ -23,6 +23,13 @@ jobs:
       - name: Install pnpm
         run: npm add -g pnpm
 
+      - uses: actions/cache@v1
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: pnpm install and build
         run: |
           pnpm install
@@ -35,4 +42,4 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unittests
-          fail_ci_if_error: true
+          fail_ci_if_error: false
