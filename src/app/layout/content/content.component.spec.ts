@@ -7,10 +7,10 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ContentComponent } from './content.component';
 
 /* MOCKS */
-import { MockAppFooterComponent } from '@core/mocks/app-footer.mock';
-import { MockSvgDefsComponent }   from '@core/mocks/svg-defs.mocks';
-import { MockSvgIconComponent }   from '@core/mocks/svg-icon.mock';
-import { MockToolbarComponent }   from '@core/mocks/app-toolbar.mock';
+import { MockAppFooterComponent } from '@core/mock/app-footer.mock';
+import { MockSvgDefsComponent }   from '@core/mock/svg-defs.mocks';
+import { MockSvgIconComponent }   from '@core/mock/svg-icon.mock';
+import { MockToolbarComponent }   from '@core/mock/app-toolbar.mock';
 
 
 describe('ContentComponent', () => {

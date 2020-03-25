@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 /* COMPONENT */
-import { StepsComponent } from './steps.component';
+import { ResourcesComponent }   from './resources.component';
 
 /* MOCKS */
-import { MockSvgIconComponent } from '@core/mocks/svg-icon.mock';
+import { MockSvgIconComponent } from '@core/mock/svg-icon.mock';
 
 
-describe('StepsComponent', () => {
-  let component: StepsComponent;
-  let fixture: ComponentFixture<StepsComponent>;
+describe('ResourcesComponent', () => {
+  let component: ResourcesComponent;
+  let fixture: ComponentFixture<ResourcesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        StepsComponent,
+        ResourcesComponent,
         MockSvgIconComponent,
       ]
     })
@@ -22,7 +22,7 @@ describe('StepsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepsComponent);
+    fixture = TestBed.createComponent(ResourcesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,7 +4,7 @@ import {
   TestBed
 } from '@angular/core/testing';
 
-import { MockSvgIconComponent} from '@core/mocks/svg-icon.mock';
+import { MockSvgIconComponent} from '@core/mock/svg-icon.mock';
 import { ToolbarComponent }    from './toolbar.component';
 
 

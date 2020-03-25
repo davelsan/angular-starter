@@ -4,7 +4,7 @@ import { CommonModule }     from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 /* COMPONENTS */
-import { SvgIconComponent } from './svg-icon/svg-icon.component';
+import { SvgIconComponent } from './component/svg-icon/svg-icon.component';
 
 
 @NgModule({

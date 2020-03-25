@@ -4,10 +4,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 
 /* MOCKS */
-import { MockHomeHighlightComponent } from '@core/mocks/home-highlight.mock';
-import { MockHomeLinksComponent }     from '@core/mocks/home-links.mock';
-import { MockHomeResourcesComponent } from '@core/mocks/home-resources.mock';
-import { MockHomeStepsComponent }     from '@core/mocks/home-steps.mock';
+import { MockHomeHighlightComponent } from '@core/mock/home-highlight.mock';
+import { MockHomeLinksComponent }     from '@core/mock/home-links.mock';
+import { MockHomeResourcesComponent } from '@core/mock/home-resources.mock';
+import { MockHomeStepsComponent }     from '@core/mock/home-steps.mock';
 
 
 describe('HomeComponent', () => {

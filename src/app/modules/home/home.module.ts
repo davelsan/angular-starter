@@ -6,11 +6,11 @@ import { SharedModule }     from '@shared/shared.module';
 import { HomeRoutingModule} from './home-routing.module';
 
 /* COMPONENTS */
-import { HomeComponent }      from './app-home/home.component';
-import { HighlightComponent } from './highlight/highlight.component';
-import { LinksComponent }     from './links/links.component';
-import { ResourcesComponent } from './resources/resources.component';
-import { StepsComponent }     from './steps/steps.component';
+import { HomeComponent }      from './page/app-home/home.component';
+import { HighlightComponent } from './component/highlight/highlight.component';
+import { LinksComponent }     from './component/links/links.component';
+import { ResourcesComponent } from './component/resources/resources.component';
+import { StepsComponent }     from './component/steps/steps.component';
 
 
 @NgModule({

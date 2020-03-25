@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LinksComponent }       from './links.component';
-import { MockSvgIconComponent } from '@core/mocks/svg-icon.mock';
+import { MockSvgIconComponent } from '@core/mock/svg-icon.mock';
 
 describe('LinksComponent', () => {
   let component: LinksComponent;
