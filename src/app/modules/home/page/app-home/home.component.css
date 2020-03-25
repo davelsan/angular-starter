@@ -1,6 +1,5 @@
 :host {
-  @apply text-sm;
-  @apply text-gray-800;
-  @apply box-border;
-  @apply antialiased;
+  @apply flex flex-col items-center;
+  @apply mt-24 px-4 box-border;
+  @apply text-sm text-gray-800 antialiased;
 }

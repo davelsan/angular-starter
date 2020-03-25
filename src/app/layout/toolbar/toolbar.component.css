@@ -1,0 +1,7 @@
+:host {
+  @apply absolute top-0;
+  @apply flex items-center;
+  @apply w-full h-16;
+  @apply bg-blue-600 text-white;
+  @apply font-semibold;
+}

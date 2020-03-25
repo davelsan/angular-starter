@@ -1,0 +1,12 @@
+:host {
+  @apply flex flex-col justify-center items-center;
+  @apply my-4;
+  @apply text-sm;
+}
+
+@screen sm {
+
+  :host {
+    @apply flex-row;
+  }
+}

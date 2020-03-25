@@ -1,7 +1,9 @@
+:host {
+  @apply flex flex-col items-center mt-5;
+}
+
 .term {
-  @apply py-6;
-  @apply px-4;
-  @apply w-full;
+  @apply w-full py-6 px-4;
   @apply cursor-text;
 }
 

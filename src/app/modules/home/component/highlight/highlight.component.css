@@ -1,0 +1,13 @@
+:host {
+  @apply relative;
+  @apply flex items-center w-56 ml-6 py-3;
+  @apply bg-blue-600 text-white;
+  @apply font-semibold;
+}
+
+@screen sm {
+
+  :host {
+    @apply w-auto pr-6;
+  }
+}
