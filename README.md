@@ -19,28 +19,28 @@
 
 ### Angular
 
-The original application has been refactored to follow the guidelines specified by the [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/index.html#) repository by [Mathis Garberg](https://mathisgarberg.no/#/about). Moreover, structural directives have been used where possible to improve the readability of `*.html` files. This of course means the app is now a little more dependent on TypeScript.
+The original application has been refactored to follow the guidelines specified in the [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/index.html#) repository by [Mathis Garberg](https://mathisgarberg.no/#/about). Structural directives have been used where possible to improve the readability of `*.html` files. Therefore the app is now a little more dependent on TypeScript.
 
 Inline `<svg/>` tags have been moved to a global `symbol-defs.svg` file in the `assets` folder. These are now dynamically loaded from `symbol` ids via the `svg-icon` shared component. For more information on how to organize svg icons using this method, check the excellent article [Using an SVG sprite icon system in Angular](https://medium.com/@rubenvermeulen/using-an-svg-sprite-icon-system-in-angular-9d4056357b60), written by [Ruben Vermeulen](https://twitter.com/rubverm) at [Medium](https://medium.com/).
 
 ### Tailwind CSS
 
-The `html` and `css` code has been modified to use [Tailwind CSS](https://tailwindcss.com/) utility classes as much as possible to give the app a similar look and feel to the original, including various effects and animations. The app now follows a mobile-first design that is fully responsive to most screen sizes.
+The `html` and `css` code has been modified to use [Tailwind CSS](https://tailwindcss.com/) utility classes, trying to stay as close to the original as possible, including various effects and animations. The app now follows a mobile-first design that is fully responsive to most screen sizes.
 
 For more information on how to integrate the two frameworks, check the excellent [Angular 8/9 + Tailwind CSS Guide](https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45) written by [Sean Kerwin](https://twitter.com/lordkerwin) at [DEV](https://dev.to/).
 
 ### ESLint
 
-Linting is configured to use [ESLint](https://eslint.org/) with the [angular-eslint](https://github.com/angular-eslint/angular-eslint) project. I followed the configuration examples referenced in their repository and it pretty much _just works&trade;_. Kudos to the team for the fantastic job they are doing.
+Linting is configured to use [ESLint](https://eslint.org/) with the [angular-eslint](https://github.com/angular-eslint/angular-eslint) project, following the examples referenced in their repository. Kudos to the team for the fantastic job they are doing.
 
 
-### Karma / Jasmine
+### Tests
 
-Unit tests have been reconfigured to run in a headless Chrome environment. Test and coverage results are thus printed to standard output, but both are still served to the appropriate development environment and can be checked in the browser, if desired.
+Unit and End-to-End tests have been reconfigured to run in a headless Chrome environment using [puppeteer](https://github.com/puppeteer/puppeteer). Unit test results are printed to standard output, but also served to the appropriate development environment and can be checked in the browser. The coverage report is served separately using the `coverage` npm script.
 
 ## Use in Development
 
-The application is configured to work with [pnpm](https://pnpm.js.org/). The corresponding `pnpm-lock.yaml` shrinkwrap file is provided.
+The application was configured with [pnpm](https://pnpm.js.org/) in mind, but `npm` and `yarn` should work just as well. The corresponding `pnpm-lock.yaml` shrinkwrap file is provided.
 
 #### Angular
 
