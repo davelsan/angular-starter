@@ -25,7 +25,7 @@ export default function (config: Config) {
       clearContext: false
     },
     coverageIstanbulReporter: {
-      dir: join(__dirname, './coverage/angular-tailwind-eslint'),
+      dir: join(__dirname, './coverage'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },

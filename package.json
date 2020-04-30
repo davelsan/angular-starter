@@ -5,7 +5,7 @@
     "ng": "ng",
     "serve": "ng serve",
     "lint": "ng lint",
-    "test:unit": "ng test --browsers=ChromeHeadless --code-coverage",
+    "test:unit": "rimraf ./coverage && ng test --browsers=ChromeHeadless --code-coverage",
     "test:e2e": "tsc e2e/protractor.conf.ts && ng e2e",
     "coverage": "http-server -c-1 -p 9875 ./coverage",
     "build": "rimraf ./dist && ng build --prod",
