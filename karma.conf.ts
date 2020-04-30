@@ -3,6 +3,9 @@
 
 import { join }   from 'path';
 import { Config } from 'karma';
+import { executablePath } from 'puppeteer';
+
+process.env.CHROME_BIN = executablePath();
 
 export default function (config: Config) {
   config.set({
