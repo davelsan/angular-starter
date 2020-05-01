@@ -1,16 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockComponent }                    from 'ng-mocks';
 
 /* MODULES */
 import { RouterTestingModule } from '@angular/router/testing';
 
 /* COMPONENT */
 import { ContentComponent } from './content.component';
+import { FooterComponent }  from '../footer/footer.component';
+import { SvgIconComponent } from '@shared/component/svg-icon/svg-icon.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
-/* MOCKS */
-import { MockAppFooterComponent } from '@core/mock/app-footer.mock';
-import { MockSvgDefsComponent }   from '@core/mock/svg-defs.mocks';
-import { MockSvgIconComponent }   from '@core/mock/svg-icon.mock';
-import { MockToolbarComponent }   from '@core/mock/app-toolbar.mock';
 
 
 describe('ContentComponent', () => {
@@ -21,10 +20,9 @@ describe('ContentComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         ContentComponent,
-        MockAppFooterComponent,
-        MockSvgDefsComponent,
-        MockSvgIconComponent,
-        MockToolbarComponent,
+        MockComponent(FooterComponent),
+        MockComponent(SvgIconComponent),
+        MockComponent(ToolbarComponent),
       ],
       imports: [
         RouterTestingModule

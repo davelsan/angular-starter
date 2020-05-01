@@ -57,6 +57,7 @@
     "karma-jasmine-html-reporter": "^1.5.3",
     "karma-verbose-reporter": "^0.0.6",
     "log4js": "^6.2.1",
+    "ng-mocks": "^9.2.0",
     "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
     "protractor": "~5.4.4",

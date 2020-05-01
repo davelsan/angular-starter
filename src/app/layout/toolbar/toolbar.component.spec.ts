@@ -1,11 +1,9 @@
-import {
-  async,
-  ComponentFixture,
-  TestBed
-} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockComponent }                    from 'ng-mocks';
 
-import { MockSvgIconComponent} from '@core/mock/svg-icon.mock';
-import { ToolbarComponent }    from './toolbar.component';
+/* COMPONENTS */
+import { ToolbarComponent } from './toolbar.component';
+import { SvgIconComponent } from '@shared/component/svg-icon/svg-icon.component';
 
 
 describe('ToolbarComponent', () => {
@@ -16,7 +14,7 @@ describe('ToolbarComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         ToolbarComponent,
-        MockSvgIconComponent,
+        MockComponent(SvgIconComponent),
       ]
     })
       .compileComponents();

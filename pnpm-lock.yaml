@@ -42,6 +42,7 @@ devDependencies:
   karma-jasmine-html-reporter: 1.5.3_f98ed5daa5523cafaf2291953acaf78d
   karma-verbose-reporter: 0.0.6_karma@5.0.4
   log4js: 6.2.1
+  ng-mocks: 9.2.0_228c3083fcf0f4a7ba442149ca102a50
   postcss-import: 12.0.1
   postcss-loader: 3.0.0
   protractor: 5.4.4
@@ -270,7 +271,6 @@ packages:
     dependencies:
       '@angular/core': 9.1.4_ca296a5e5adc0afc8d32926df5677b5e
       tslib: 1.11.1
-    dev: false
     peerDependencies:
       '@angular/core': 9.1.4
       tslib: ^1.10.0
@@ -312,7 +312,6 @@ packages:
       '@angular/core': 9.1.4_ca296a5e5adc0afc8d32926df5677b5e
       rxjs: 6.5.5
       tslib: 1.11.1
-    dev: false
     peerDependencies:
       '@angular/core': 9.1.4
       rxjs: ^6.5.3
@@ -371,7 +370,6 @@ packages:
       '@angular/platform-browser': 9.1.4_a2d2cf735f145b0b88a60dfc48e5d932
       rxjs: 6.5.5
       tslib: 1.11.1
-    dev: false
     peerDependencies:
       '@angular/common': 9.1.4
       '@angular/core': 9.1.4
@@ -406,7 +404,6 @@ packages:
       '@angular/common': 9.1.4_3156c761a044e9077542aedfc2ddb240
       '@angular/core': 9.1.4_ca296a5e5adc0afc8d32926df5677b5e
       tslib: 1.11.1
-    dev: false
     peerDependencies:
       '@angular/animations': 9.1.4
       '@angular/common': 9.1.4
@@ -6466,6 +6463,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+  /ng-mocks/9.2.0_228c3083fcf0f4a7ba442149ca102a50:
+    dependencies:
+      '@angular/compiler': 9.1.4_tslib@1.11.1
+      '@angular/core': 9.1.4_ca296a5e5adc0afc8d32926df5677b5e
+      '@angular/forms': 9.1.4_59ff2b9b7a7a487e63ceebcdd9b8460d
+    dev: true
+    peerDependencies:
+      '@angular/compiler': '>=5.x <=9.x'
+      '@angular/core': '>=5.x <=9.x'
+      '@angular/forms': '>=5.x <=9.x'
+    resolution:
+      integrity: sha512-k2/FoYDW2Izjsl7LKz3L9obfJUvLb7dG5B5p7Bgtqt6mM76lJ8wpPxC5GuINdoI6wGbDfcF+va5kE3clLlSVpA==
   /nice-try/1.0.5:
     dev: true
     resolution:
@@ -10252,6 +10261,7 @@ specifiers:
   karma-jasmine-html-reporter: ^1.5.3
   karma-verbose-reporter: ^0.0.6
   log4js: ^6.2.1
+  ng-mocks: ^9.2.0
   postcss-import: 12.0.1
   postcss-loader: 3.0.0
   protractor: ~5.4.4

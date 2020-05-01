@@ -1,10 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockComponent }                    from 'ng-mocks';
 
 /* COMPONENT */
-import { ResourcesComponent }   from './resources.component';
-
-/* MOCKS */
-import { MockSvgIconComponent } from '@core/mock/svg-icon.mock';
+import { ResourcesComponent } from './resources.component';
+import { SvgIconComponent }   from '@shared/component/svg-icon/svg-icon.component';
 
 
 describe('ResourcesComponent', () => {
@@ -15,7 +14,7 @@ describe('ResourcesComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         ResourcesComponent,
-        MockSvgIconComponent,
+        MockComponent(SvgIconComponent),
       ]
     })
       .compileComponents();
