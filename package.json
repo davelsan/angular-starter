@@ -8,7 +8,7 @@
     "test:unit": "rimraf ./coverage && ng test --browsers=ChromeHeadless --code-coverage",
     "test:e2e": "tsc e2e/protractor.conf.ts && ng e2e",
     "coverage": "http-server -c-1 -p 9875 ./coverage",
-    "build": "rimraf ./dist && ng build --prod --stats-json",
+    "build": "rimraf ./dist && env-cmd -e production ng build --prod --stats-json",
     "analyze": "webpack-bundle-analyzer ./dist/angular-tailwind-eslint/stats-es2015.json",
     "ci:unit": "ng test --watch=false --browsers=ChromeHeadless --code-coverage"
   },
@@ -46,6 +46,7 @@
     "@typescript-eslint/parser": "^2.30.0",
     "bluebird": "^3.7.2",
     "codelyzer": "^5.2.2",
+    "env-cmd": "^10.1.0",
     "eslint": "^6.8.0",
     "http-server": "^0.12.3",
     "jasmine-core": "~3.5.0",
