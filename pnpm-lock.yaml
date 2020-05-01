@@ -20,7 +20,6 @@ devDependencies:
   '@angular/cli': 9.1.4
   '@angular/compiler-cli': 9.1.4_646d958aee48f5fc058a95580ecbdbb0
   '@angular/language-service': 9.1.4
-  '@fullhuman/postcss-purgecss': 2.1.2
   '@types/jasmine': 3.5.10
   '@types/jasminewd2': 2.0.8
   '@types/karma': 5.0.0
@@ -51,6 +50,7 @@ devDependencies:
   tailwindcss: 1.4.1
   ts-node: 8.9.1_typescript@3.8.3
   typescript: 3.8.3
+  webpack-bundle-analyzer: 3.7.0
 lockfileVersion: 5.1
 packages:
   /@angular-builders/custom-webpack/9.1.0_8ff87476cca65ecaf42dc113e0428f6c:
@@ -2228,6 +2228,17 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QIZrnhueC1W0gYlDEeaPr/rrxSI=
+  /bfj/6.1.2:
+    dependencies:
+      bluebird: 3.7.2
+      check-types: 8.0.3
+      hoopy: 0.1.4
+      tryer: 1.0.1
+    dev: true
+    engines:
+      node: '>= 6.0.0'
+    resolution:
+      integrity: sha512-BmBJa4Lip6BPRINSZ0BPEIfB1wUY/9rwbwvIHQA1KjX9om29B6id0wnWXq7m3bn5JrUVjeOTnVuhPT1FiHwPGw==
   /big.js/5.2.2:
     dev: true
     resolution:
@@ -2662,6 +2673,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
+  /check-types/8.0.3:
+    dev: true
+    resolution:
+      integrity: sha512-YpeKZngUmG65rLudJ4taU7VLkOCTMhNl/u4ctNC56LQS/zJTyNH0Lrtwm1tfTsbLlwvlfsA2d1c8vCf/Kh2KwQ==
   /chokidar/2.1.8:
     dependencies:
       anymatch: 2.0.0
@@ -3678,6 +3693,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-uEUyaDKoSQ1M4Oq8l45hSE26SnTxL6snNnqvK/VWx5wJhmff5z0FUVJDKDanor/6w3kzE3i7XZOk+7wC0EXr1A==
+  /duplexer/0.1.1:
+    dev: true
+    resolution:
+      integrity: sha1-rOb/gIwc5mtX0ev5eXessCM0z8E=
   /duplexify/3.7.1:
     dependencies:
       end-of-stream: 1.4.4
@@ -3708,6 +3727,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+  /ejs/2.7.4:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
   /electron-to-chromium/1.3.425:
     dev: true
     resolution:
@@ -4261,6 +4287,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-jnVIqW08wjJ+5eZ0FocjozO7oqA=
+  /filesize/3.6.1:
+    dev: true
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha512-7KjR1vv6qnicaPMi1iiTcI85CyYwRO/PSFCu6SvqL8jN2Wjt/NIYQTFtFs7fSDCYOstUkEWIQGFUg5YZQfjlcg==
   /fill-range/4.0.0:
     dependencies:
       extend-shallow: 2.0.1
@@ -4637,6 +4669,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
+  /gzip-size/5.1.1:
+    dependencies:
+      duplexer: 0.1.1
+      pify: 4.0.1
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-FNHi6mmoHvs1mxZAds4PpdCS6QG8B4C1krxJsMutgxl5t3+GlRTzzI3NEkifXx2pVsOvJdOGSmIgDhQ55FwdPA==
   /handle-thing/2.0.1:
     dev: true
     resolution:
@@ -4768,6 +4809,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=
+  /hoopy/0.1.4:
+    dev: true
+    engines:
+      node: '>= 6.0.0'
+    resolution:
+      integrity: sha512-HRcs+2mr52W0K+x8RzcLzuPPmVIKMSv97RGHy0Ea9y/mpcaK+xTrjICA04KAHi4GRzxliNqNJEFYWHghy3rSfQ==
   /hosted-git-info/2.8.8:
     dev: true
     resolution:
@@ -9461,6 +9508,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
+  /tryer/1.0.1:
+    dev: true
+    resolution:
+      integrity: sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
   /ts-node/8.9.1_typescript@3.8.3:
     dependencies:
       arg: 4.1.3
@@ -9849,6 +9900,27 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-XINj6b8CYuUYC93SG3xPkxlyUc3IJbD6Vvo75CVGuG9uzsefDzWQrhz0Lq8vbPxtb4d63CZdYophF8k8Or/YiA==
+  /webpack-bundle-analyzer/3.7.0:
+    dependencies:
+      acorn: 7.1.1
+      acorn-walk: 7.1.1
+      bfj: 6.1.2
+      chalk: 2.4.2
+      commander: 2.20.3
+      ejs: 2.7.4
+      express: 4.17.1
+      filesize: 3.6.1
+      gzip-size: 5.1.1
+      lodash: 4.17.15
+      mkdirp: 0.5.5
+      opener: 1.5.1
+      ws: 6.2.1
+    dev: true
+    engines:
+      node: '>= 6.14.4'
+    hasBin: true
+    resolution:
+      integrity: sha512-mETdjZ30a3Yf+NTB/wqTgACK7rAYQl5uxKK0WVTNmF0sM3Uv8s3R58YZMW7Rhu0Lk2Rmuhdj5dcH5Q76zCDVdA==
   /webpack-dev-middleware/3.7.2_webpack@4.42.0:
     dependencies:
       memory-fs: 0.4.1
@@ -10239,7 +10311,6 @@ specifiers:
   '@angular/platform-browser': ~9.1.4
   '@angular/platform-browser-dynamic': ~9.1.4
   '@angular/router': ~9.1.4
-  '@fullhuman/postcss-purgecss': ^2.1.2
   '@types/jasmine': ~3.5.10
   '@types/jasminewd2': ~2.0.8
   '@types/karma': ^5.0.0
@@ -10272,4 +10343,5 @@ specifiers:
   ts-node: ~8.9.1
   tslib: ^1.11.1
   typescript: ~3.8.3
+  webpack-bundle-analyzer: ^3.7.0
   zone.js: ~0.10.3
